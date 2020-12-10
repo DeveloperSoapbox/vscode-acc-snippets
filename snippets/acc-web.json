@@ -1,0 +1,68 @@
+{
+    "ACC Web Var String Output": {
+        "prefix": [
+            "acc-output-var"
+        ],
+        "body": [
+            "<%=ctx.vars.${1:varName}.toString()%>"
+        ],
+        "description": "ACC JS code to output a var's string value."
+    },
+    "ACC Web App If": {
+        "prefix": [
+            "acc-if"
+        ],
+        "body": [
+            "<%if(ctx.vars.${1:varName}.toString() == '${2:stringEqualValue}'){%>",
+            "",
+            "<%}%>"
+        ],
+        "description": "ACC JS code for IF statement in web app page."
+    },
+    "ACC Web App If-Else": {
+        "prefix": [
+            "acc-if-else"
+        ],
+        "body": [
+            "<%if(ctx.vars.${1:varName}.toString() == '${2:stringEqualValue}'){%>",
+            "",
+            "<%}else if(ctx.vars.${3:varName}.toString() == '${4:stringEqualValue}'){%>",
+            "",
+            "<%}else{%>",
+            "",
+            "<%}%>"
+        ],
+        "description": "ACC JS code for IF-ELSEIF-ELSE statement in web app page."
+    },
+    "ACC Web App For Loop": {
+        "prefix": [
+            "acc-for-loop"
+        ],
+        "body": [
+            "<%for each(var rec in ctx.vars.${1:xmlCollectionNode}){%>",
+            "   <%=rec.@${2:propertyName}%>",
+            "<%}%>"
+        ],
+        "description": "ACC JS code for IF-ELSEIF-ELSE statement in web app page."
+    },
+    "ACC Web App Set Value": {
+        "prefix": [
+            "acc-setvalue"
+        ],
+        "body": [
+            "//Set a ctx.vars variable:",
+            "document.controller.setValue('/ctx/vars/${1:varName}', '${2:varValue}');"
+        ],
+        "description": "ACC JS code to set value of a ctx.vars variable in web app page."
+    },
+    "ACC Web App Submit": {
+        "prefix": [
+            "acc-submit"
+        ],
+        "body": [
+            "//Trigger transition:",
+            "document.controller.submit('next', '_self', '${1:transitionName}');"
+        ],
+        "description": "ACC JS code to trigger transition in web app page."
+    }
+}

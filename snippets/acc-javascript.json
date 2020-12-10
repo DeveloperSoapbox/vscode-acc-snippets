@@ -1,0 +1,62 @@
+{
+    "ACC Iterate queryDef": {
+        "prefix": [
+            "acc-iter-querydef"
+        ],
+        "body": [
+            "var query = xtk.queryDef.create(",
+            "<queryDef schema=\"${1:extName}:${2:schemaName}\" operation=\"select\">",
+            "    <select>",
+            "    <node expr=\"@${3:fieldName}\"/>",
+            "    </select>",
+            "    <where>",
+            "    <condition expr=\"@${4:conditionFieldName} = ${5:conditionEqualValue}\"/>",
+            "    </where>",
+            "</queryDef>",
+            ");",
+            "",
+            "var results = query.ExecuteQuery();",
+            "",
+            "for each (var result in results.${2:schemaName}) {",
+            "    logInfo(result.${3:fieldName});",
+            "}"
+        ],
+        "description": "ACC JS code to declare and iterate through a queryDef."
+    },
+    "ACC Iterate sqlSelect": {
+        "prefix": [
+            "acc-iter-sqlselect"
+        ],
+        "body": [
+            "//Since ACC uses E4X, we can declare SQL statement as XML to avoid string concatenation.",
+            "//Node name (i.e. 'sql') can be anything.  Per E4X, variable replacement can be done using brackets (e.g. SELECT 1 FROM {vars.tableName}).",
+            "var sql = <sql>SELECT ${1:fieldName} FROM ${2:tableName}</sql>;",
+            "var results = sqlSelect(\"results, @${1:fieldName}:string\", sql.toString());",
+            "",
+            "for each(result in results){",
+            "    logInfo(result.@${1:fieldName}.toString());",
+            "}"
+        ],
+        "description": "ACC JS code to declare and iterate through a sqlSelect."
+    },
+    "ACC formatDate": {
+        "prefix": [
+            "acc-formatdate"
+        ],
+        "body": [
+            "formatDate(getCurrentDate(), '%2M-%2D-%4Y %2H:%2N:%2S', '${1:timeZone}');"
+        ],
+        "description": "ACC JS formatDate function."
+    },
+    "ACC SQL Escape": {
+        "prefix": [
+            "acc-sqlescape"
+        ],
+        "body": [
+            "loadLibrary('/nl/core/shared/nl.js');",
+            "NL.require('/nl/core/sql.js');",
+            "var ${1:escapedVarName} = NL.SQL.escape(${2:fieldBeingEscaped});"
+        ],
+        "description": "ACC JS escape value to include in SQL statement."
+    }    
+}
