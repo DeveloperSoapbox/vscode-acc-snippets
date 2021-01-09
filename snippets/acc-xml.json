@@ -1,0 +1,108 @@
+{
+    "ACC Schema Compute String": {
+            "prefix": [
+                "acc-schema-compute-str"
+            ],
+            "body": [
+                "<compute-string expr=\"@${1:fieldName}\"/>"
+            ],
+            "description": "ACC Schema Compute String"
+    },
+    "ACC Schema Enum": {
+        "prefix": [
+            "acc-schema-enum"
+        ],
+        "body": [
+        "<enumeration name=\"${1:name}\" basetype=\"${2:type}\" default=\"${3:default}\">",
+        "   <value name=\"${4:value1Name}\" label=\"${5:value1Label}\" value=\"${6:value1Value}\"/>",
+        "</enumeration>"
+        ],
+        "description": "ACC Schema Enum"
+    },
+    "ACC Schema Key": {
+        "prefix": [
+            "acc-schema-key",
+            "acc-schema-id"
+        ],
+        "body": [
+        "<key name=\"${1:name}\" internal=\"true\">",
+        "    <keyfield xpath=\"@${2:keyFieldName}\"/>",
+        "</key>"
+        ],
+        "description": "ACC Schema Key / ID"
+    },
+    "ACC Schema Index": {
+        "prefix": [
+            "acc-schema-index"
+        ],
+        "body": [
+        "<dbindex name=\"${1:name}\" unique=\"true\">",
+        "    <keyfield xpath=\"@${2:indexFieldName}\"/>",
+        "</dbindex>"
+        ],
+        "description": "ACC Schema Index"
+    },
+    "ACC Schema String Attribute": {
+        "prefix": [
+            "acc-schema-attr-string"
+        ],
+        "body": [
+            "<attribute name=\"${1:name}\" label=\"${2:label}\" length=\"${3:length}\" type=\"string\"/>"
+        ],
+        "description": "ACC Schema String Attribute"
+    },
+    "ACC Schema Integer Attribute": {
+        "prefix": [
+            "acc-schema-attr-integer"
+        ],
+        "body": [
+            "<attribute name=\"${1:name}\" label=\"${2:label}\" type=\"long\"/>"
+        ],
+        "description": "ACC Schema Integer Attribute"
+    },    
+    "ACC Schema Byte Attribute": {
+        "prefix": [
+            "acc-schema-attr-byte"
+        ],
+        "body": [
+            "<attribute name=\"${1:name}\" label=\"${2:label}\" type=\"byte\"/>"
+        ],
+        "description": "ACC Schema Byte Attribute"
+    },
+    "ACC Schema Date Attribute": {
+        "prefix": [
+            "acc-schema-attr-date"
+        ],
+        "body": [
+            "<attribute name=\"${1:name}\" label=\"${2:label}\" type=\"date\"/>"
+        ],
+        "description": "ACC Schema Date Attribute"
+    },
+    "ACC Schema DateTime Attribute": {
+        "prefix": [
+            "acc-schema-attr-datetime"
+        ],
+        "body": [
+            "<attribute name=\"${1:name}\" label=\"${2:label}\" type=\"datetime\"/>"
+        ],
+        "description": "ACC Schema DateTime Attribute"
+    },
+    "ACC Schema Boolean Attribute": {
+        "prefix": [
+            "acc-schema-attr-boolean"
+        ],
+        "body": [
+            "<attribute name=\"${1:name}\" label=\"${2:label}\" type=\"boolean\"/>"
+        ],
+        "description": "ACC Schema Boolean Attribute"
+    },
+    "ACC Schema Memo Attribute": {
+        "prefix": [
+            "acc-schema-attr-memo"
+        ],
+        "body": [
+            "<attribute name=\"${1:name}\" label=\"${2:label}\" type=\"memo\"/>"
+        ],
+        "description": "ACC Schema Memo Attribute"
+    }
+}    
