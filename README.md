@@ -6,9 +6,11 @@ This is an unofficial extension and I am not affiliated with the Adobe corporati
 
 ## Usage
 
-Usage Details Here
+Type part of a snippet, press enter, and the snippet unfolds. Requires that the file type be set to HTML or Javascript, depending on which snippet set is needed.
 
-### ACC Web App Snippets
+Alternatively, press Ctrl+Space (Windows, Linux) or Cmd+Space (macOS) to activate snippets from within the editor.
+
+### ACC Web App Snippets (**Active with files of type HTML**)
 
 | Snippet                      | Purpose                                                                            |
 | ---------------------------- | ---------------------------------------------------------------------------------- |
@@ -19,7 +21,7 @@ Usage Details Here
 | `acc-submit`                 | ACC javascript for triggering a page transition, using document.controller.submit  |
 | `acc-output-var`             | ACC output string value, delimited for HTML (i.e. <%=ctx.vars.varName%>)           |
 
-### ACC Javascript Snippets
+### ACC Javascript Snippets (**Active with files of type Javascript**)
 
 | Snippet                      | Purpose                                                                            |
 | ---------------------------- | ---------------------------------------------------------------------------------- |
@@ -27,6 +29,29 @@ Usage Details Here
 | `acc-iter-sqlselect`         | Declare a SQL string, execute it, and iterate records using a for loop             |
 | `acc-formatdate`             | ACC formatDate function template                                                   |
 | `acc-sqlescape`              | ACC javascript for adding variable to ctx, using document.controller.setValue      |
+| `acc-log-info`               | logInfo(value);                                                                    |
+| `acc-log-verbose`            | logVerbose(value);                                                                 |
+| `acc-log-warning`            | logWarning(value);                                                                 |
+| `acc-log-error`              | logError(value);                                                                   |
+| `acc-uuid`                   | var uuid = getUUID();                                                              |
+
+### ACC XML Snippets (**Active with files of type XML**)
+
+| Snippet                      | Purpose                                                                            |
+| ---------------------------- | ---------------------------------------------------------------------------------- |
+| `acc-schema-compute-str`     | compute-string element with basic attributes                                       |
+| `acc-schema-enum`            | enumeration element with basic child elements / attributes                         |
+| `acc-schema-key`             | key element with basic child elements / attributes                                 |
+| `acc-schema-id`              | Alias for acc-schema-key                                                           |
+| `acc-schema-index`           | dbindex element with basic child elements / attributes                             |
+| `acc-schema-attr-string`     | Schema attribute of type string with some basic attributes                         |
+| `acc-schema-attr-integer`    | Schema attribute of type long with some basic attributes                           |
+| `acc-schema-attr-byte`       | Schema attribute of type byte with some basic attributes                           |
+| `acc-schema-attr-date`       | Schema attribute of type date with some basic attributes                           |
+| `acc-schema-attr-datetime`   | Schema attribute of type datetime with some basic attributes                       |
+| `acc-schema-attr-boolean`    | Schema attribute of type boolean with some basic attributes                        |
+| `acc-schema-attr-memo`       | Schema attribute of type memo and some basic attributes                            |
+
 
 
 ## Installation

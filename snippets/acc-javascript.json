@@ -58,5 +58,50 @@
             "var ${1:escapedVarName} = NL.SQL.escape(${2:fieldBeingEscaped});"
         ],
         "description": "ACC JS escape value to include in SQL statement."
-    }    
+    },
+    "ACC Log Info": {
+        "prefix": [
+            "acc-log-info"
+        ],
+        "body": [
+            "logInfo(${1:message});"
+        ],
+        "description": "ACC JS Log Info"
+    },
+    "ACC Log Verbose": {
+        "prefix": [
+            "acc-log-verbose"
+        ],
+        "body": [
+            "logVerbose(${1:message});"
+        ],
+        "description": "ACC JS Log Verbose"
+    },
+    "ACC Log Warning": {
+        "prefix": [
+            "acc-log-warning"
+        ],
+        "body": [
+            "logWarning(${1:message});"
+        ],
+        "description": "ACC JS Log Warning"
+    },
+    "ACC Log Error": {
+        "prefix": [
+            "acc-log-error"
+        ],
+        "body": [
+            "logError(${1:message});"
+        ],
+        "description": "ACC JS Log Error"
+    },
+    "ACC UUID": {
+        "prefix": [
+            "acc-uuid"
+        ],
+        "body": [
+            "var uuid = getUUID();"
+        ],
+        "description": "ACC JS get Universally Unique ID (UUID)"
+    }     
 }

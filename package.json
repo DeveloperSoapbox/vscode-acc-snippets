@@ -3,7 +3,7 @@
     "publisher": "developersoapbox",
     "displayName": "Adobe Campaign Snippets",
     "description": "Useful snippets for Adobe Campaign development",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "icon": "images/logo.png",
     "repository": {
         "type": "git",
@@ -32,6 +32,10 @@
             {
                 "language": "javascript",
                 "path": "./snippets/acc-javascript.json"
+            },
+            {
+                "language": "xml",
+                "path": "./snippets/acc-xml.json"
             }
         ]
     }
